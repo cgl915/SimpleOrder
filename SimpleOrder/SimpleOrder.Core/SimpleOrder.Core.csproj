@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DCBEE411-D520-4306-888D-1A3FE1F65B7E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleOrder.Core</RootNamespace>
+    <AssemblyName>SimpleOrder.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\Reference\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HF.PLM.Framework.EF">
+      <HintPath>..\Reference\HF.PLM.Framework.EF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+<Compile Include="Model\DTO\B_MenuTypeInfo.cs" />
+<Compile Include="Mapping\SqlServer\B_MenuTypeMap.cs" />
+<Compile Include="IDAL\IB_MenuTypeDAL.cs" />
+<Compile Include="IBLL\IB_MenuTypeBLL.cs" />
+<Compile Include="DAL\B_MenuTypeDAL.cs" />
+<Compile Include="BLL\B_MenuTypeBLL.cs" />
+<Compile Include="Model\DTO\B_ShopInfo.cs" />
+<Compile Include="Mapping\SqlServer\B_ShopMap.cs" />
+<Compile Include="IDAL\IB_ShopDAL.cs" />
+<Compile Include="IBLL\IB_ShopBLL.cs" />
+<Compile Include="DAL\B_ShopDAL.cs" />
+<Compile Include="BLL\B_ShopBLL.cs" />
+<Compile Include="Model\DTO\B_TableListInfo.cs" />
+<Compile Include="Mapping\SqlServer\B_TableListMap.cs" />
+<Compile Include="IDAL\IB_TableListDAL.cs" />
+<Compile Include="IBLL\IB_TableListBLL.cs" />
+<Compile Include="DAL\B_TableListDAL.cs" />
+<Compile Include="BLL\B_TableListBLL.cs" />
+<Compile Include="Model\DTO\D_OrderInfo.cs" />
+<Compile Include="Mapping\SqlServer\D_OrderMap.cs" />
+<Compile Include="IDAL\ID_OrderDAL.cs" />
+<Compile Include="IBLL\ID_OrderBLL.cs" />
+<Compile Include="DAL\D_OrderDAL.cs" />
+<Compile Include="BLL\D_OrderBLL.cs" />
+<Compile Include="Model\DTO\D_OrderDetailInfo.cs" />
+<Compile Include="Mapping\SqlServer\D_OrderDetailMap.cs" />
+<Compile Include="IDAL\ID_OrderDetailDAL.cs" />
+<Compile Include="IBLL\ID_OrderDetailBLL.cs" />
+<Compile Include="DAL\D_OrderDetailDAL.cs" />
+<Compile Include="BLL\D_OrderDetailBLL.cs" />
+<Compile Include="Model\DTO\D_T_HistoryInfo.cs" />
+<Compile Include="Mapping\SqlServer\D_T_HistoryMap.cs" />
+<Compile Include="IDAL\ID_T_HistoryDAL.cs" />
+<Compile Include="IBLL\ID_T_HistoryBLL.cs" />
+<Compile Include="DAL\D_T_HistoryDAL.cs" />
+<Compile Include="BLL\D_T_HistoryBLL.cs" />
+    <Compile Include="Model\DTO\B_MenuContentInfo.cs" />
+    <Compile Include="Mapping\SqlServer\B_MenuContentMap.cs" />
+    <Compile Include="IDAL\IB_MenuContentDAL.cs" />
+    <Compile Include="IBLL\IB_MenuContentBLL.cs" />
+    <Compile Include="DAL\B_MenuContentDAL.cs" />
+    <Compile Include="BLL\B_MenuContentBLL.cs" />
+    <Compile Include="DAL\EFContext.cs" />
+    <Compile Include="Migrations\201701300151286_Tables01.cs" />
+    <Compile Include="Migrations\201701300151286_Tables01.Designer.cs">
+      <DependentUpon>201701300151286_Tables01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Entity\B_MenuContent.cs" />
+    <Compile Include="Model\Entity\B_MenuType.cs" />
+    <Compile Include="Model\Entity\B_Shop.cs" />
+    <Compile Include="Model\Entity\B_TableList.cs" />
+    <Compile Include="Model\Entity\D_Order.cs" />
+    <Compile Include="Model\Entity\D_OrderDetail.cs" />
+    <Compile Include="Model\Entity\D_T_History.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701300151286_Tables01.resx">
+      <DependentUpon>201701300151286_Tables01.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

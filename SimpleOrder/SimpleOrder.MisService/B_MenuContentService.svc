@@ -1,0 +1,2 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SimpleOrder.WCFLibrary.B_MenuContentService" %>
+<%@ Assembly Name="SimpleOrder.WCFLibrary" %>
